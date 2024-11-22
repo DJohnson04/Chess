@@ -1,18 +1,28 @@
 //super class for types of pieces. 
 public abstract class Piece {
     private boolean isBlack; // the color will be handles as a integer to easily read it. 0 is white and 1 is black
-    public int location; //sets the location of the piece on the board
+    public int location; // the location of the piece on the board starting at 0 and going to 63;
 
-    public Piece(boolean color) {
-        this(color, -1);
-    }
+    
     public Piece(boolean color, int location) {
-    isBlack = color;
-
+        isBlack = color;
+        this.location = location;
     }
 
-    public abstract boolean possibleMoves()
+    /**
+     * lists the possible moves of a individual piece 
+     * @return
+     */
+    public abstract int[] possibleMoves();
     
 
-    public abstract boolean canMove(Piece one, int location);
+    /**
+     * a verification method to check if a piece can move to a desired location
+     * @param location self-explanatory 
+     * @return returns boolean value(true for valid and false for invalid)
+     */
+    public abstract boolean canMove(int location);
+
+    
+    public abstract void move(int location);
 }
