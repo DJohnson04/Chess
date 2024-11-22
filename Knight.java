@@ -1,6 +1,6 @@
 public class Knight extends Piece {
-    public Knight(boolean color, int location) {
-        super(color, location);
+    public Knight(boolean isBlack, int location) {
+        super(isBlack, location);
     }
     
     public boolean canMove(int location) {
