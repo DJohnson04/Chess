@@ -1,4 +1,5 @@
 public class King extends Piece {
+    
     public King(boolean isBlack, int location) {
         super(isBlack, location);
     }
